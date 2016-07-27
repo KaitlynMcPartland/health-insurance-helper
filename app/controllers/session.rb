@@ -1,14 +1,19 @@
+get '/sessions/new' do 
+	erb :'/sessions/new'
+end
+
 post '/sessions' do 
 	user = User.authenticate(params[:user])
 	if user
 		login(user)
 		redirect "/users/#{user.id}"
 	else
-		redirect '/'
+		@error = "Invalid log in"
+		redirect '/sessions/new'
 	end
 end
 
-get '/logout' do 
+get '/sessions/logout' do 
 	logout
 	redirect '/'
 end

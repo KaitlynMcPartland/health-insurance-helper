@@ -32,7 +32,7 @@
       <a href="/logout">Log out</a>|nav bar text
     </div>
   </nav> -->
-  <h1>Welcome to Healthy Helper</h1>
+  <h1>Health Insurance Help</h1>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,23 +43,29 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">HH</a>
+        <a class="navbar-brand" href="#">HiH</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
+          <li role="presentation"><a href="/">Home</a></li>
 
           <li role="presentation"><a href="#">Resources</a></li>
 
           <li role="presentation"><a href="#">Find a Plan</a></li>
 
-          <li role="presentation"><a href='#'>Profile</a></li>
 
-          <li role="presentation"><a href='/users/login'>Log In</a></li>
+          <% if session[:id] %>
+          <li role="presentation"><a href="/users/<%= session[:id] %>">Profile</a></li>
+          <li role="presentation"><a href='/sessions/logout'>Log Out</a></li>
+          <% else %>
+          <li role="presentation"><a href='/sessions/new'>Log In</a></li>
+          <li role="presentation"><a href='/users/new'>Sign Up</a></li>
 
-          <li role="presentation"><a href="#">Sign Up</a></li>
+          <% end %>
+
+
 
         </ul>
       </div><!-- /.navbar-collapse -->

@@ -1,0 +1,14 @@
+<% if @error %>
+<%= @error %>
+<% end %>
+<form action="/sessions" method= "post">
+	<!--    because for in label = id in input if you click the field name/label it will put that field into focus -->
+	<label for="username">Username:</label>
+	<input id="username" type="text" name="user[username]"><br><br>
+	
+	<!-- another way to do it - wrap input in label tags -->
+	<label>Password:
+		<input type="password" name="user[password]">
+	</label><br><br>
+	<input type="submit" value="Log in">
+</form>
