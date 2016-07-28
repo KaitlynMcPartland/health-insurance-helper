@@ -43,7 +43,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">HiH</a>
+        <a class="navbar-brand" href="/">HiH</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,10 +53,8 @@
 
           <li role="presentation"><a href="#">Resources</a></li>
 
-          <li role="presentation"><a href="#">Find a Plan</a></li>
-
-
           <% if session[:id] %>
+          <li role="presentation"><a href="/users/<%= session[:id] %>/edit">Find a Plan</a></li>
           <li role="presentation"><a href="/users/<%= session[:id] %>">Profile</a></li>
           <li role="presentation"><a href='/sessions/logout'>Log Out</a></li>
           <% else %>
