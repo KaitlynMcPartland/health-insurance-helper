@@ -21,5 +21,5 @@ end
 
 get '/users/:id/edit' do
 
-	erb: :'/users/edit'
+	erb :'/users/edit'
 end
