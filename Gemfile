@@ -17,6 +17,9 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 
 gem 'shotgun'
+gem 'httparty'
+gem 'puma'
+
 
 # Use Bcrypt
 gem 'bcrypt'
@@ -26,6 +29,4 @@ group :test do
   gem 'rspec'
 end
 
-gem 'httparty'
-gem 'puma'
 
