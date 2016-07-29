@@ -19,6 +19,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'httparty'
 gem 'puma'
+gem 'rspec'
 
 
 # Use Bcrypt
@@ -26,7 +27,7 @@ gem 'bcrypt'
 
 group :test do
   gem 'faker'
-  gem 'rspec'
+
 end
 
 
