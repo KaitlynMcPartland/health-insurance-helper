@@ -4,8 +4,7 @@ class Cat
   base_uri 'http://thecatapi.com/api/images/get'
 
   def create_url
-    @cat = self.class.get('?category=boxes&size=small&format=xml')
+    self.class.get('?category=boxes&size=small&format=xml')
   end
-
 
 end
