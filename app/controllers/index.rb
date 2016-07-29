@@ -1,4 +1,6 @@
+
 get '/' do
   # Look in app/views/index.erb
-  erb :index
+  @cat = Cat.new
+  erb :'cats/show'
 end

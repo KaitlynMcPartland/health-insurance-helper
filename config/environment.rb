@@ -21,6 +21,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'bcrypt'
 
+
 enable :sessions
 
 # Some helper constants for path-centric logic
